@@ -27,6 +27,11 @@ public class DoctorActivity extends AppCompatActivity {
         setContentView(R.layout.activity_doctor);
 
         getUser();
+
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction().add(R.id.contentDoctorFragment, new AboutMeFragment()).commit();
+        }
+
     } // Main Methon
 
     @Override
